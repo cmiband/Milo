@@ -5,3 +5,4 @@ Milo/Drivers
 *.ld
 *.s
 Milo/.settings
+Milo/Debug
