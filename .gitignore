@@ -1,0 +1,7 @@
+# STMCubeIDE Generated C files
+Milo/Drivers
+
+# Other STMCubeIDE files
+*.ld
+*.s
+Milo/.settings
