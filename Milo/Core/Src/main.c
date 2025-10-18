@@ -99,13 +99,24 @@ int main(void)
   Servo servo;
   servoInit(&servo, &htim2, TIM_CHANNEL_1);
 
+  Servo servoTwo;
+  servoInit(&servoTwo, &htim2, TIM_CHANNEL_2);
+
+  servoSetAngle(&servo, 0);
+  servoSetAngle(&servoTwo, 0);
+  HAL_Delay(500);
+
   while (1)
   {
-	  servoSetAngle(&servo, 0);
-	  HAL_Delay(3000);
+	  servoSetAngle(&servo, 30);
+	  servoSetAngle(&servoTwo, 30);
 
-	  servoSetAngle(&servo, 180);
-	  HAL_Delay(3000);
+	  HAL_Delay(1000);
+
+	  servoSetAngle(&servo, 0);
+	  servoSetAngle(&servoTwo, 0);
+
+	  HAL_Delay(1000);
 
     /* USER CODE END WHILE */
 
